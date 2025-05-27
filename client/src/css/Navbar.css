@@ -8,6 +8,7 @@
   color: white;
 }
 .hamburger {
+  will-change: transform, opacity;
   font-size: 30px;
   cursor: pointer;
   position: absolute;
