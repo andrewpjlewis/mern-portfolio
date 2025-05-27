@@ -1,0 +1,102 @@
+html {
+  background-color: #0D4579;
+}
+
+main h1,
+main h2,
+main h3,
+p {
+  color: white;
+  text-decoration: none;
+}
+
+.hero-section {
+  background-image: url('https://res.cloudinary.com/dniomugis/image/upload/v1748357320/shooting-star-hero_ijuj0l.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-title,
+.hero-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+.hero-title {
+  font-size: 2.5em;
+  margin: 0;
+  animation-name: fadeSlideUp;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  font-size: 1em;
+  margin-top: 0.5em;
+  color: #00adb5;
+  animation-name: fadeSlideUp;
+  animation-duration: 1s;
+  animation-delay: 1.2s;
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero button svg {
+  width: 50px;
+  height: 50px;
+  stroke-width: 2;
+}
+
+#hero path {
+  color: white;
+}
+
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (min-width: 769px) {
+  
+}
+
+@keyframes slideFadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
