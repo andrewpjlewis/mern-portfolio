@@ -8,7 +8,7 @@ const Footer = () => {
       <p>© {new Date().getFullYear()} Andrew Lewis. All rights reserved.</p>
       <div className="social-icons">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/andrewpjlewis"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -16,7 +16,7 @@ const Footer = () => {
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/andrewlewis357/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -24,7 +24,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://behance.net/yourusername"
+          href="https://www.behance.net/andrewlewis54"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Behance"

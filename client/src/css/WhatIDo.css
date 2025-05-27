@@ -1,0 +1,23 @@
+.what-i-do {
+  padding: 15px;
+}
+
+.what-i-do h2,
+.what-i-do p {
+  padding-left: 15px;
+  line-height: 30px;
+}
+.what-i-do p {
+  padding: 0 25px;
+  line-height: 30px;
+}
+.service-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 50px;
+}
+
+.icon {
+  height: 50px;
+}

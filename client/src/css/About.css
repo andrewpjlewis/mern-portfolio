@@ -1,0 +1,10 @@
+.about-section {
+  padding: 15px;
+  margin-top: -25px;
+}
+
+.about-section h2,
+.about-section p {
+  padding-left: 15px;
+  line-height: 30px;
+}

@@ -1,6 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+}
+
+html {
+  background-color: #093258;
+}
+
+main h1,
+main h2,
+main h3,
+p {
+  color: #E0E6ED;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+hr {
+  width: 25%;
+  margin: 1.5rem 0;
+  border: none;
+  height: 2px;
+  background-color: #E6E6E6;
 }
 
 @keyframes fadeSlideUp {

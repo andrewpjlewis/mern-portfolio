@@ -1,0 +1,51 @@
+.skills-section {
+    padding: 15px;
+}
+
+.skills-section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-section li {
+  list-style: none;        /* Remove default bullets */
+  width: 100px;             /* Width of the circle */
+  height: 100px;            /* Height of the circle */
+  border-radius: 50%;
+  border: 2px solid #535353;
+  background-color: #093258;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-section li:hover {
+  background-color: #072744;
+  transform: scale(1.05);
+}
+
+.design-icons{
+    margin-left: 40px;
+}
+
+.design-icons svg {
+    padding-right: 15px;
+}
+
+.tools-list {
+    margin: 0 25px;
+}
+
+.skills-section h3 {
+  display: flex;
+  align-items: center;
+}
