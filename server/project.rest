@@ -1,0 +1,17 @@
+### Get all portfolio projects
+GET http://localhost:5000/api/projects
+
+### Add a new project
+POST http://localhost:5000/api/projects
+Content-Type: application/json
+
+{
+  "title": "MERN Stack Portfolio",
+  "image": "",
+  "link": "https://github.com/andrewpjlewis/mern-portfolio",
+  "description": "My personal developer portfolio built with the MERN stack. Includes a custom backend API, project showcase, and responsive design.",
+  "tags": ["React", "Node.js", "Express.js", "Full Stack", "HTML", "CSS", "JavaScript", "Responsive Design", "GitHub"]
+}
+
+### Delete a project
+DELETE http://localhost:5000/api/projects/6834d80b0941d1f17b8e423c
