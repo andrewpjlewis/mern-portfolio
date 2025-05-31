@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import api from '../api/axios'; // Updated import
+import api from '../api/axios';
 import '../css/Projects.css';
 import { Link } from 'react-router-dom';
 

@@ -3,19 +3,26 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 const projectRoutes = require('./routes/projectRoutes');
-
 const connectDB = require('./config/db');
 
 const app = express();
 
 // Middleware
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://mern-portfolio-hky9.onrender.com',
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json());
 
 // Connect to MongoDB
 connectDB();
 
-// API route (optional)
+// API test route
 app.get('/api', (req, res) => {
   res.json({ message: 'API is working!' });
 });

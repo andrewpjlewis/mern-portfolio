@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import api from '../api/axios';
 import { Link } from 'react-router-dom';
-import api from '../api/axios'; // Updated import
 
 const FeaturedProjects = () => {
   const [projects, setProjects] = useState([]);
