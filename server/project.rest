@@ -14,4 +14,4 @@ Content-Type: application/json
 }
 
 ### Delete a project
-DELETE http://localhost:5000/api/projects/6834d80b0941d1f17b8e423c
+DELETE http://localhost:5000/api/projects/68350a42ed9c4c17f6391dea

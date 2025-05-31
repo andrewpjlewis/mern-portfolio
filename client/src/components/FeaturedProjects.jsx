@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import '../css/Projects.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function Projects() {
+const FeaturedProjects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/projects')
+    const projectIds = [
+      '683b3a3c22a727d772146c4f',
+      '683b3a4822a727d772146c53',
+      '683b3a4d22a727d772146c55'
+    ];
+
+    axios.get(`/api/projects?ids=${projectIds.join(',')}`)
       .then(res => setProjects(res.data))
       .catch(err => console.error(err));
   }, []);
 
   return (
-    <main id='all-project' className='project-container'>
-      <Link to="/" className="back-button">← Back to Home</Link>
-      <h1>All Projects</h1>
-      <ul >
+    <section id='featured-project' className='project-container'>
+      <h2>Featured Projects</h2>
+      <ul>
         {projects.map(project => (
           <li key={project._id}>
             {project.image && (
@@ -36,8 +40,9 @@ function Projects() {
           </li>
         ))}
       </ul>
-    </main>
+      <Link to="/projects">View all projects →</Link>
+    </section>
   );
-}
+};
 
-export default Projects;
+export default FeaturedProjects;

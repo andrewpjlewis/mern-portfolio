@@ -4,6 +4,7 @@ import About from './About';
 import WhatIDo from './WhatIDo';
 import Skills from './Skills';
 import Resume from './Resume';
+import FeaturedProjects from './FeaturedProjects';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <WhatIDo />
         <Skills />
         <Resume />
+        <FeaturedProjects />
       </main>
     </>
   );

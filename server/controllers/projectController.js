@@ -1,13 +1,25 @@
 const Project = require('../models/project');
 
-// GET all projects
+// GET specific or limited projects
 exports.getProjects = async (req, res) => {
-    try {
-        const projects = await Project.find();
-        res.json(projects);
-    } catch (error) {
-        res.status(500).json({ message: 'Failed to fetch projects', error });
+  try {
+    const { ids, limit } = req.query;
+
+    if (ids) {
+      const idArray = ids.split(',');
+      const projects = await Project.find({ _id: { $in: idArray } });
+      return res.json(projects);
     }
+
+    const parsedLimit = parseInt(limit);
+    const projects = await Project.find()
+      .sort({ createdAt: -1 })
+      .limit(isNaN(parsedLimit) ? 0 : parsedLimit);
+
+    res.json(projects);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to fetch projects', error });
+  }
 };
 
 // POST a new project
@@ -21,7 +33,7 @@ exports.createProject = async (req, res) => {
   }
 };
 
-// Optional: DELETE a project
+// DELETE a project
 exports.deleteProject = async (req, res) => {
   try {
     await Project.findByIdAndDelete(req.params.id);

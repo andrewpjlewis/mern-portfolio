@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.use(express.static(path.join(__dirname, 'client', 'public')));
 
 app.use('/api/projects', projectRoutes);
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Start server
 const PORT = process.env.PORT || 5000;
