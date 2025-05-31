@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api/axios'; // Updated import
 
 const FeaturedProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
       '683b3a4d22a727d772146c55'
     ];
 
-    axios.get(`/api/projects?ids=${projectIds.join(',')}`)
+    api.get(`/projects?ids=${projectIds.join(',')}`)
       .then(res => setProjects(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -23,13 +23,9 @@ const FeaturedProjects = () => {
       <ul>
         {projects.map(project => (
           <li key={project._id}>
-            {project.image && (
-              <img src={project.image} alt={`${project.title} image`} />
-            )}
+            {project.image && <img src={project.image} alt={`${project.title} image`} />}
             <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
             <p>{project.description}</p>
-            
-            {/* Display tags */}
             {project.tags && project.tags.length > 0 && (
               <ul className="tags-list">
                 {project.tags.map((tag, index) => (
