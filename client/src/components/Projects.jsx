@@ -3,6 +3,8 @@ import api from '../api/axios';
 import '../css/Projects.css';
 import { Link } from 'react-router-dom';
 
+const BASE_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
+
 function Projects() {
   const [projects, setProjects] = useState([]);
 
@@ -19,7 +21,12 @@ function Projects() {
       <ul>
         {projects.map(project => (
           <li key={project._id}>
-            {project.image && <img src={project.image} alt={`${project.title} image`} />}
+            {project.image && (
+              <img
+                src={`${BASE_URL}${project.image}`}
+                alt={`${project.title} image`}
+              />
+            )}
             <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
             <p>{project.description}</p>
             {project.tags && project.tags.length > 0 && (
