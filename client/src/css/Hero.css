@@ -74,7 +74,7 @@
 
 #hero button {
   position: absolute;
-  bottom: 20px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   background: none;
@@ -84,7 +84,9 @@
 }
 
 @media (min-width: 769px) {
-  
+  #hero button {
+  bottom: 60px;
+  }
 }
 
 @keyframes slideFadeDown {

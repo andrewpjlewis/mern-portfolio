@@ -11,7 +11,10 @@
     margin-top: 5rem;
     margin-left: 1rem;
 }
-
+#featured-project {
+    margin: 1rem;
+    padding: 0;
+}
 /* Back button for all projects page */
 .back-button {
     display: block;

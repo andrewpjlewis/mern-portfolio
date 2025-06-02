@@ -1,11 +1,13 @@
 .navbar {
-  position: absolute;
+  position: fixed; /* changed from absolute to fixed */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.8); /* optional: add a semi-transparent background */
   color: white;
+  backdrop-filter: blur(10px);    /* optional: adds blur effect behind navbar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* optional: adds a shadow */
 }
 .hamburger {
   will-change: transform, opacity;
