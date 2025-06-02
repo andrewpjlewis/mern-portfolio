@@ -18,7 +18,7 @@ function Projects() {
       })
       .catch(err => {
         console.error(err);
-        setLoading(false); // still stop loading on error
+        setLoading(false);
       });
   }, []);
 
