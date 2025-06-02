@@ -1,80 +1,116 @@
-/* All Proejcts */
-#all-project h1 {
+/* All Projects and Featured Projects share the same container styles */
+.project-container {
+    padding: 15px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* Headings */
+#all-project h1,
+#featured-project h2 {
     margin-top: 5rem;
     margin-left: 1rem;
 }
+
+/* Back button for all projects page */
 .back-button {
     display: block;
     margin-top: 5rem;
+    margin-left: 1rem;
+    color: #E0E6ED;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-/* Featured Projects */
-#featured-project {
-    padding: 15px;
-}
-.project-item {
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.project-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  outline: 8px solid rgba(255, 255, 255, 0.05);
-  z-index: 1;
-  cursor: pointer;
-}
-.project-container ul:hover .project-item {
-  opacity: 0.5;
-}
-.project-container ul:hover .project-item:hover {
-  opacity: 1;
-}
+/* Project list */
 .project-container ul {
     padding: 1rem 1rem;
 }
-.project-container li{
+
+/* Project item styles */
+.project-item {
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+/* Hover effect */
+.project-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    outline: 12px solid rgba(255, 255, 255, 0.05);
+    z-index: 1;
+    transform: scale(1.02);
+}
+
+/* Dim all except hovered */
+.project-container ul:hover .project-item {
+    opacity: 0.5;
+}
+.project-container ul:hover .project-item:hover {
+    opacity: 1;
+}
+
+/* Images */
 .project-container img {
     border-radius: 4px;
     max-width: 250px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
 }
+
+/* Project title links */
 .project-container a {
     color: #E0E6ED;
     padding: 0;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-}
-.project-container p {
-    padding: 0;
-    margin: 0;
-    font-size: .88rem;
-    opacity: .75;
-}
-ul .tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  padding: 1rem 0;
-  list-style: none;
-  justify-content: flex-start;
-}
-.tags-list li {
-  display: inline-flex;
-  padding: 0.25rem 0.75rem;
-  color: #01bdc7;
-  background-color: rgba(1, 189, 199, .1);
-  border-radius: 15px;
-  font-size: 0.65rem;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
+    margin-bottom: 0.25rem;
 }
 
+/* Project description */
+.project-container p {
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.88rem;
+    opacity: 0.75;
+}
+
+/* Tags list */
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+/* Individual tag style */
+.tags-list li {
+    display: inline-flex;
+    padding: 0.25rem 0.75rem;
+    color: #01bdc7;
+    background-color: rgba(1, 189, 199, 0.1);
+    border-radius: 15px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Responsive spacing */
 @media (min-width: 769px) {
-    #all-project h1,
+    .project-container {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
     .project-container ul {
-        padding: 1rem 30rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }

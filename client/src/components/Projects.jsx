@@ -32,7 +32,7 @@ function Projects() {
       ) : (
         <ul>
           {projects.map(project => (
-            <li key={project._id}>
+            <li key={project._id} className="project-item">
               {project.image && (
                 <img
                   src={`${BASE_URL}${project.image}`}

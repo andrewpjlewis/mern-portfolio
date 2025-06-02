@@ -8,3 +8,34 @@
   padding-left: 15px;
   line-height: 30px;
 }
+#about-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#about-pic h2 {
+  margin-bottom: 0;
+}
+#about-pic img {
+  max-width: 250px;
+  border-radius: 50%;
+}
+
+@media (min-width: 769px) {
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    align-items: center;
+  }
+  #about-pic {
+    background-color: rgba(4, 23, 48, 255);
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 14px;
+    padding: 3rem;
+    margin: 0 1.5rem;
+  }
+}
