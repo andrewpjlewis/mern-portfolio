@@ -36,13 +36,7 @@ const FeaturedProjects = () => {
       ) : (
         <ul>
           {projects.map(project => (
-            <li key={project._id}>
-              {project.image && (
-                <img
-                  src={`${BASE_URL}${project.image}`}
-                  alt={`${project.title} image`}
-                />
-              )}
+            <li key={project._id} className='project-item'>
               <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
               <p>{project.description}</p>
               {project.tags && project.tags.length > 0 && (
@@ -51,6 +45,12 @@ const FeaturedProjects = () => {
                     <li key={index} className="tag-item">{tag}</li>
                   ))}
                 </ul>
+              )}
+               {project.image && (
+                <img
+                  src={`${BASE_URL}${project.image}`}
+                  alt={`${project.title} image`}
+                />
               )}
             </li>
           ))}
