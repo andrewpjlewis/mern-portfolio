@@ -37,12 +37,12 @@ const Skills = () => (
             <li>Node</li>
             <li>Express</li>
             <li>React</li>
-            <li>Python</li>
+            <li>MongoDB</li>
           </ul>
         </div>
 
         <div className='resume-btn-container'>
-          <a href="/path-to-resume.pdf" className="view-resume-btn" target="_blank" rel="noopener noreferrer">
+          <a href="/andrew-lewis-resume.pdf" className="view-resume-btn" target="_blank" rel="noopener noreferrer">
               View Resume Here
           </a>
         </div>

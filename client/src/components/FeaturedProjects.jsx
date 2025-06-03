@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api/axios';
 import { Link } from 'react-router-dom';
+import '../css/Projects.css';
 import LoadingDots from './LoadingDots';
 
 const BASE_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5000';
@@ -30,6 +31,7 @@ const FeaturedProjects = () => {
   return (
     <section id='featured-project' className='project-container'>
       <h2>Featured Projects</h2>
+      <hr />
 
       {loading ? (
         <div className="loading-wrapper"><LoadingDots /></div>

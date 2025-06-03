@@ -46,9 +46,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><a onClick={() => handleLinkClick('hero')}>Home</a></li>
           <li><a onClick={() => handleLinkClick('about')}>About</a></li>
-          <li><a onClick={() => handleLinkClick('featured-project')}>Projects</a></li>
-          <li><a onClick={() => handleLinkClick('contact')}>Contact</a></li>
-        </ul>
+          <li><a onClick={() => handleLinkClick('featured-project')}>Projects</a></li>        </ul>
       </div>
     </nav>
   );
