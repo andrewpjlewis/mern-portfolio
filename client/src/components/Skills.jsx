@@ -42,7 +42,10 @@ const Skills = () => (
         </div>
 
         <div className='resume-btn-container'>
-          <a href="/andrew-lewis-resume.pdf" className="view-resume-btn" target="_blank" rel="noopener noreferrer">
+          <a href="/andrew-lewis-ibm-certificate.pdf" className="view-resume-btn" target="_blank" rel="noopener noreferrer">
+              View IBM Certificate Here
+          </a>
+          <a href="/andrew-lewis-resume.pdf" id='resume' className="view-resume-btn" target="_blank" rel="noopener noreferrer">
               View Resume Here
           </a>
         </div>
